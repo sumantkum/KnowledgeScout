@@ -28,7 +28,7 @@ function UploadSection({ setUploaded, setUploadedDocId, setUploadedFilename }) {
         method: "POST",
         body: formData,
       });
-      
+
       const data = await res.json();
 
       if (!res.ok) {
@@ -51,11 +51,13 @@ function UploadSection({ setUploaded, setUploadedDocId, setUploadedFilename }) {
   return (
     <div className="mt-16 text-center">
       <div className="p-8 bg-white/10 backdrop-blur-md rounded-2xl shadow-lg border border-white/10">
-        <h2 className="text-2xl font-semibold mb-4 text-white">Upload Your Document</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-white">
+          Upload Your Document
+        </h2>
         <p className="text-gray-300 mb-6">
           Upload a PDF file. Our AI will process it for intelligent Q&A.
         </p>
-        
+
         <div className="flex justify-center mb-6">
           <input
             type="file"

@@ -12,9 +12,7 @@ router.post("/", async (req, res) => {
     if (!req.files || !req.files.file) {
       return res.status(400).json({ error: "No file uploaded" });
     }
-
     const file = req.files.file;
-    
     // Check if file is PDF
     if (file.mimetype !== 'application/pdf') {
       return res.status(400).json({ error: "Only PDF files are supported" });
